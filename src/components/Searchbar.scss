@@ -1,0 +1,17 @@
+.searchbar-comp {
+  width: 25%;
+  margin: 50px auto;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+
+  #searchbar-input {
+    min-width: 150px;
+    flex-basis: 3;
+  }
+
+  #searchbar-submit {
+    flex-basis: 1;
+  }
+}

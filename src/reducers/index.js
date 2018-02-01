@@ -9,7 +9,11 @@
  */
 /* Populated by react-webpack-redux:reducer */
 import { combineReducers } from 'redux';
-
-const reducers = {};
+import sliderDisplay from '../reducers/sliderDisplay.js';
+import search from '../reducers/search.js';
+const reducers = {
+  search,
+  sliderDisplay
+};
 const combined = combineReducers(reducers);
 module.exports = combined;

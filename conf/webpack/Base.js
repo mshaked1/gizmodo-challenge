@@ -19,7 +19,7 @@ class WebpackBaseConfig {
    * @return {Array} List of included packages
    */
   get includedPackages() {
-    return [].map((pkg) => fs.realpathSync(path.join(npmBase, pkg)));
+    return [].map(pkg => fs.realpathSync(path.join(npmBase, pkg)));
   }
 
   /**
@@ -96,7 +96,8 @@ class WebpackBaseConfig {
             include: this.srcPathAbsolute,
             loader: 'babel-loader',
             query: {
-              presets: ['es2015']
+              presets: ['react', 'es2015'],
+              plugins: ['transform-class-properties']
             }
           },
           {

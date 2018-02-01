@@ -10,13 +10,20 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {} from '../actions/';
+import {
+  typeSearch,
+  executeSearch,
+  storeSearchResults,
+  setMainDisplay,
+  navigate,
+  slide
+} from '../actions/';
 import Main from '../components/App';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    const { actions } = this.props;
-    return <Main actions={actions} />;
+    const {actions, search, sliderDisplay} = this.props;
+    return <Main actions={actions} search={search} sliderDisplay={sliderDisplay}/>;
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -25,17 +32,37 @@ class App extends Component {
  *       adjust it here.
  */
 App.propTypes = {
-  actions: PropTypes.shape({})
+  actions: PropTypes.shape({
+    typeSearch: PropTypes.func.isRequired,
+    executeSearch: PropTypes.func.isRequired,
+    storeSearchResults: PropTypes.func.isRequired,
+    setMainDisplay: PropTypes.func.isRequired,
+    navigate: PropTypes.func.isRequired,
+    slide: PropTypes.func.isRequired
+  }),
+  search: PropTypes.shape({}),
+  sliderDisplay: PropTypes.shape({})
 };
-function mapStateToProps(state) { // eslint-disable-line no-unused-vars
+function mapStateToProps(state) {
+  // eslint-disable-line no-unused-vars
   /* Populated by react-webpack-redux:reducer */
-  const props = {};
-  return props;
+  const props = {
+    search: state.search,
+    sliderDisplay: state.sliderDisplay
+  };
+  return {};
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
-  const actionMap = { actions: bindActionCreators(actions, dispatch) };
-  return actionMap;
+  const actions = {
+    typeSearch,
+    executeSearch,
+    storeSearchResults,
+    setMainDisplay,
+    navigate,
+    slide
+  };
+  // const actionMap = { actions: bindActionCreators(actions, dispatch) };
+  return {};
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,0 +1,15 @@
+.maindisplayphoto-component {
+  display: flex;
+  justify-content: center;
+
+  .arrow {
+    flex-basis: 1;
+    font-size: 72px;
+  }
+
+  img, #placeholder {
+    width: 300px;
+    border: 1px solid black;
+    flex-basis: 5
+  }
+}
