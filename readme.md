@@ -7,5 +7,6 @@
    1. npm install
    2. npm run start OR npm run serve:dist
 3. Browser should open new tab, otherwise navigate to localhost:8000
+4. See package.json for other available npm scripts
 
 ### Chrome extension scaffolded using [React Webpack Redux Generator](https://github.com/stylesuxx/generator-react-webpack-redux)
