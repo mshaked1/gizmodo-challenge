@@ -25,6 +25,7 @@ MainDisplay.propTypes = {
   page: PropTypes.number.isRequired,
   url: PropTypes.string,
   index: PropTypes.number,
+  search: PropTypes.string,
   navigate: PropTypes.func.isRequired
 };
 

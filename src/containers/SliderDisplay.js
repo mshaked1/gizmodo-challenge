@@ -1,32 +1,26 @@
-import React, {
-  Component,
-  PropTypes
-} from 'react';
+import { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import {} from '../actions/';
-import Main from '../components/App';
+import { slide } from '../actions/';
+import SliderDisplayComponent from '../components/SliderDisplayComponent';
 
-class SliderDisplay extends Component {
-  render() {
-    const { actions } = this.props;
-    return <Main actions={actions} />;
-  }
-}
+const mapStateToProps = state => ({
+  photos: state.sliderDisplay.photos,
+  mainIndex: state.sliderDisplay.mainPhoto.index
+});
+
+const mapDispatchToProps = dispatch => ({
+  onClick: index => dispatch(slide(index))
+});
+
+const SliderDisplay = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SliderDisplayComponent);
 
 SliderDisplay.propTypes = {
-  actions: PropTypes.shape({})
+  photos: PropTypes.arrayOf(PropTypes.string),
+  mainIndex: PropTypes.number,
+  onClick: PropTypes.func
 };
-
-function mapStateToProps(state) {
-  const props = {};
-  return props;
-}
-
-function mapDispatchToProps(dispatch) {
-  const actions = {};
-  const actionMap = { actions: bindActionCreators(actions, dispatch) };
-  return actionMap;
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(SliderDisplay);

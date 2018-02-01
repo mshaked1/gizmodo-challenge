@@ -1,4 +1,4 @@
-var reducer = require('../../src/reducers/search');
+const reducer = require('../../src/reducers/search');
 
 describe('search', () => {
 

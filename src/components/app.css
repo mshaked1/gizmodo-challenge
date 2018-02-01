@@ -6,3 +6,25 @@ body {
   background: #fff;
   color: #000;
 }
+
+#header {
+  height: 5%;
+  text-align: center;
+  font-size: 36px;
+}
+
+#search-bar-container {
+  height: 20%;
+}
+
+#main-display-container {
+  height: 50%;
+  margin-bottom: 20px;
+  box-sizing: border-box
+}
+
+#slider-display-container {
+  height: 25%;
+  background: #000;
+  width: 100%;
+}

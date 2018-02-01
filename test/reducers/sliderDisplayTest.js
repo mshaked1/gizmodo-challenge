@@ -1,4 +1,4 @@
-var reducer = require('../../src/reducers/sliderDisplay');
+const reducer = require('../../src/reducers/sliderDisplay');
 
 describe('sliderDisplay', () => {
 

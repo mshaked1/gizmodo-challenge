@@ -1,7 +1,5 @@
-import { EXECUTE_SEARCH, SLIDE } from './const';
 import executeSearch from './executeSearch';
 import slide from './slide';
-/* eslint no-console: "off" */
 
 function navigate(parameter) {
   if (parameter.direction === 'left') {

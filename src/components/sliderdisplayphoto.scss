@@ -1,0 +1,20 @@
+.photo-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.sliderdisplayphoto-component {
+  height: 150px;
+  width: 150px;
+  border: 2px solid white;
+  border-radius: 4px;
+
+  &.selected {
+    border: 4px solid rgb(108, 186, 238);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

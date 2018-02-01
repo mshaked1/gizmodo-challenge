@@ -13,15 +13,11 @@ const SearchBar = ({ search, onChange, onClick }) => (
       <input
         id="searchbar-input"
         type="text"
-        placeholder="Search..."
+        placeholder="Find Flickr Photos..."
         defaultValue={search}
         name="search"
         onChange={event => onChange(event.target.value)}
       />
-      <button
-        id="searchbar-submit"
-        type="submit">Find Images
-      </button>
     </form>
   </div>
 );

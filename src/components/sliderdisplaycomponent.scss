@@ -1,0 +1,33 @@
+.sliderdisplaycomponent-component {
+  display: flex;
+  align-items: center;
+    span {
+      width: 80%;
+      margin: 10px auto;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 200px;
+    }
+}
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition: opacity 1500ms ease-in;
+}
+
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave.slide-leave-active {
+  opacity: 0.01;
+  transition: opacity 1500ms ease-in;
+}
+
+

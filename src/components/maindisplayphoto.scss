@@ -1,15 +1,42 @@
 .maindisplayphoto-component {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 
   .arrow {
     flex-basis: 1;
     font-size: 72px;
+    padding: 0;
+    border: none;
+    background: none;
+    vertical-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   img, #placeholder {
     width: 300px;
-    border: 1px solid black;
+    height: 300px;
     flex-basis: 5
   }
 }
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition: opacity 1500ms ease-in;
+}
+
+// .slide-leave {
+//   opacity: 1;
+// }
+
+// .slide-leave.slide-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 1500ms ease-in;
+// }
