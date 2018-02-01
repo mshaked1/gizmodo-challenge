@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "gizmodo-challenge",
+    "style": "scss",
+    "cssmodules": false,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
