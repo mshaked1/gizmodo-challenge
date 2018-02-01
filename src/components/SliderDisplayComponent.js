@@ -5,21 +5,27 @@ import SliderDisplayPhoto from '../components/SliderDisplayPhoto';
 
 const SliderDisplayComponent = ({ photos, mainIndex, onClick }) => (
   <div className="sliderdisplaycomponent-component">
-    <ReactCSSTransitionGroup
-      transitionName="slide"
-      transitionEnterTimeout={1500}
-      transitionLeaveTimeout={1500}
-    >
-      {photos.map((photo, index) => (
-        <SliderDisplayPhoto
-          url={photo}
-          isSelected={mainIndex === index}
-          key={index}
-          id={index}
-          handleClick={onClick}
-        />
-      ))}
-    </ReactCSSTransitionGroup>
+    {!photos[0] &&
+      <div className="warning">You have not searched for any photos...</div>
+    }
+    {photos &&
+      <ReactCSSTransitionGroup
+        className={`${!photos[0] ? 'hide' : ''}`}
+        transitionName="slide"
+        transitionEnterTimeout={1500}
+        transitionLeaveTimeout={1500}
+      >
+        {photos.map((photo, index) => (
+          <SliderDisplayPhoto
+            url={photo}
+            isSelected={mainIndex === index}
+            key={index}
+            id={index}
+            handleClick={onClick}
+          />
+        ))}
+      </ReactCSSTransitionGroup>
+    }
   </div>
 );
 

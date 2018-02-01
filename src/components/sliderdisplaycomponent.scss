@@ -1,15 +1,26 @@
 .sliderdisplaycomponent-component {
+  height: 200px;
   display: flex;
   align-items: center;
-    span {
-      width: 80%;
-      margin: 10px auto;
-      background: #000;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 200px;
+  justify-content: center;
+
+  .warning {
+    color: white;
+  }
+
+  span {
+    width: 80%;
+    margin: 10px auto;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    &.hide {
+      display: none;
     }
+  }
 }
 
 .slide-enter {
